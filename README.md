@@ -154,6 +154,7 @@ docker run -p 50001:80 agent0ai/agent-zero
 | Page | Description |
 |-------|-------------|
 | [Installation](./docs/setup/installation.md) | Installation, setup and configuration |
+| [Zeabur Deployment](./docs/setup/zeabur-deployment.md) | Deploy Agent Zero on Zeabur using the official image and persistent `/a0/usr` storage |
 | [Usage](./docs/guides/usage.md) | Basic and advanced usage |
 | [Guides](./docs/guides/) | Step-by-step guides: Usage, Projects, API Integration, MCP Setup, A2A Setup |
 | [Development Setup](./docs/setup/dev-setup.md) | Development and customization |

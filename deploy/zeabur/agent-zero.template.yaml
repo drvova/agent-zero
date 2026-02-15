@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://schema.zeabur.app/template.json
+apiVersion: zeabur.com/v1
+kind: Template
+metadata:
+  name: Agent Zero
+spec:
+  description: Deploy Agent Zero on Zeabur from the official Docker image with persistent user data.
+  tags:
+    - AI
+    - Assistant
+    - Productivity
+  readme: |-
+    # Agent Zero
+
+    This template deploys Agent Zero from the official `agent0ai/agent-zero` image.
+
+    ## What this template configures
+    - HTTP service on port `80`
+    - Persistent volume mounted at `/a0/usr`
+    - HTTP health check at `/health`
+
+    ## First-time setup after deploy
+    1. Open the generated web URL.
+    2. In Agent Zero, set authentication credentials (Settings -> Authentication).
+    3. Configure your model provider and API keys in Settings.
+  services:
+    - name: agent-zero
+      template: PREBUILT
+      spec:
+        source:
+          image: agent0ai/agent-zero:latest
+        ports:
+          - id: web
+            port: 80
+            type: HTTP
+        volumes:
+          - id: user-data
+            dir: /a0/usr
+        healthCheck:
+          type: HTTP
+          port: web
+          http:
+            path: /health
+        instructions:
+          - title: Web URL
+            content: ${ZEABUR_WEB_URL}
+          - title: Persistent Data Directory
+            content: /a0/usr

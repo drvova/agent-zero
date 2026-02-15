@@ -8,6 +8,7 @@ Welcome to the Agent Zero documentation hub. Whether you're getting started or d
 - **[Quickstart Guide](quickstart.md):** Get up and running in 5 minutes with Agent Zero.
 - **[Installation Guide](setup/installation.md):** Detailed setup instructions for all platforms (or [update your installation](setup/installation.md#how-to-update-agent-zero)).
 - **[VPS Deployment](setup/vps-deployment.md):** Deploy Agent Zero on a remote server.
+- **[Zeabur Deployment](setup/zeabur-deployment.md):** Deploy Agent Zero on Zeabur with persistent `/a0/usr` storage.
 - **[Development Setup](setup/dev-setup.md):** Set up a local development environment.
 
 ## User Guides
@@ -64,6 +65,7 @@ Welcome to the Agent Zero documentation hub. Whether you're getting started or d
     - [Using on Mobile Devices](setup/installation.md#using-agent-zero-on-your-mobile-device)
     - [How to Update Agent Zero](setup/installation.md#how-to-update-agent-zero)
   - [VPS Deployment](setup/vps-deployment.md)
+  - [Zeabur Deployment](setup/zeabur-deployment.md)
   - [Development Setup](setup/dev-setup.md)
 
 - [User Guides](#user-guides)
